@@ -7,15 +7,17 @@ import (
 	"os"
 	"strings"
 
-	"github.com/sleepinggenius2/gosmi"
-	"github.com/sleepinggenius2/gosmi/types"
+	"github.com/Chindada/gosmi"
+	"github.com/Chindada/gosmi/types"
 )
 
 type arrayStrings []string
 
-var modules arrayStrings
-var paths arrayStrings
-var debug bool
+var (
+	modules arrayStrings
+	paths   arrayStrings
+	debug   bool
+)
 
 func (a arrayStrings) String() string {
 	return strings.Join(a, ",")

@@ -4,8 +4,8 @@ import (
 	"log"
 	"os"
 
+	"github.com/Chindada/gosmi/parser"
 	"github.com/alecthomas/repr"
-	"github.com/sleepinggenius2/gosmi/parser"
 )
 
 func main() {

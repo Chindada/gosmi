@@ -3,9 +3,9 @@ package gosmi
 import (
 	"fmt"
 
-	"github.com/sleepinggenius2/gosmi/models"
-	"github.com/sleepinggenius2/gosmi/smi"
-	"github.com/sleepinggenius2/gosmi/types"
+	"github.com/Chindada/gosmi/models"
+	"github.com/Chindada/gosmi/smi"
+	"github.com/Chindada/gosmi/types"
 )
 
 type SmiType struct {

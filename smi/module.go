@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"unsafe"
 
-	"github.com/sleepinggenius2/gosmi/smi/internal"
-	"github.com/sleepinggenius2/gosmi/types"
+	"github.com/Chindada/gosmi/smi/internal"
+	"github.com/Chindada/gosmi/types"
 )
 
 // char *smiLoadModule(const char *module)
@@ -58,7 +58,6 @@ func GetNextModule(smiModulePtr *types.SmiModule) *types.SmiModule {
 		return nil
 	}
 	return &modulePtr.Next.SmiModule
-
 }
 
 // SmiNode *smiGetModuleIdentityNode(SmiModule *smiModulePtr)

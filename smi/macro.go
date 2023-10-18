@@ -3,8 +3,8 @@ package smi
 import (
 	"unsafe"
 
-	"github.com/sleepinggenius2/gosmi/smi/internal"
-	"github.com/sleepinggenius2/gosmi/types"
+	"github.com/Chindada/gosmi/smi/internal"
+	"github.com/Chindada/gosmi/types"
 )
 
 // SmiMacro *smiGetMacro(SmiModule *smiModulePtr, char *macro)

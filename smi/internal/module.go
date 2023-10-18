@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sleepinggenius2/gosmi/parser"
-	"github.com/sleepinggenius2/gosmi/types"
+	"github.com/Chindada/gosmi/parser"
+	"github.com/Chindada/gosmi/types"
 )
 
 type Module struct {
@@ -342,23 +342,23 @@ func GetModule(name string) (*Module, error) {
 }
 
 func LoadModule(name string) (*Module, error) {
-	//log.Printf("%s: Loading", name)
+	// log.Printf("%s: Loading", name)
 	path, f, err := GetModuleFile(name)
 	if err != nil {
 		return nil, fmt.Errorf("Get module file %q: %w", path, err)
 	}
 	defer f.Close()
-	//log.Printf("%s: Found at %s", name, path)
+	// log.Printf("%s: Found at %s", name, path)
 	in, err := parser.Parse(f)
 	if err != nil {
 		return nil, fmt.Errorf("Parse module: %w", err)
 	}
-	//log.Printf("%s: Parsed", name)
+	// log.Printf("%s: Parsed", name)
 	out, err := BuildModule(path, in)
 	if err != nil {
 		return nil, fmt.Errorf("Build module: %w", err)
 	}
-	//log.Printf("%s: Built", name)
+	// log.Printf("%s: Built", name)
 	return out, nil
 }
 

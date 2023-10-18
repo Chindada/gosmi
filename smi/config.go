@@ -7,8 +7,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/sleepinggenius2/gosmi/smi/internal"
-	"github.com/sleepinggenius2/gosmi/types"
+	"github.com/Chindada/gosmi/smi/internal"
+	"github.com/Chindada/gosmi/types"
 )
 
 const (
@@ -26,8 +26,10 @@ var DefaultSmiPaths []string = []string{
 	"/usr/local/share/mibs/tubs",
 }
 
-type FS = internal.FS
-type NamedFS = internal.NamedFS
+type (
+	FS      = internal.FS
+	NamedFS = internal.NamedFS
+)
 
 func NewNamedFS(name string, fs FS) NamedFS { return NamedFS{Name: "[" + name + "]", FS: fs} }
 
