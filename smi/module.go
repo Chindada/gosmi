@@ -9,16 +9,16 @@ import (
 )
 
 // char *smiLoadModule(const char *module)
-func LoadModule(module string) string {
+func LoadModule(module string) (string, error) {
 	checkInit()
 	modulePtr, err := internal.GetModule(module)
 	if err != nil {
-		fmt.Println(err)
+		return "", err
 	}
 	if modulePtr == nil {
-		return ""
+		return "", fmt.Errorf("module %s not found", module)
 	}
-	return modulePtr.Name.String()
+	return modulePtr.Name.String(), nil
 }
 
 // int smiIsLoaded(const char *module)

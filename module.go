@@ -93,11 +93,7 @@ func CreateModule(smiModule *types.SmiModule) (module SmiModule) {
 }
 
 func LoadModule(modulePath string) (string, error) {
-	moduleName := smi.LoadModule(modulePath)
-	if moduleName == "" {
-		return "", fmt.Errorf("Could not load module at %s", modulePath)
-	}
-	return moduleName, nil
+	return smi.LoadModule(modulePath)
 }
 
 func GetLoadedModules() (modules []SmiModule) {
